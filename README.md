@@ -37,7 +37,7 @@ Animations    -----      #CSS3 Keyframes & Intersection Observer API
 └── search.html       -----     # Real-time item database
 
 
-Clone the repository:Bashgit clone https://github.com/eb-1105/ALFS.git
+Clone the repository:Bashgit clone:https://github.com/eb-1105/ASTUlost-found_website
 
 Navigate to the directory:Bashcd ALFS
 
