@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTU Lost & Found | Search Items</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific layout for the Search page */
+        .search-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+        }
+
+        .filters {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .item-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .item-img {
+            width: 100%;
+            height: 150px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        .item-info {
+            padding: 15px;
+        }
+
+        .status-tag {
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .status-lost { background: #ffebee; color: #c62828; }
+        .status-found { background: #e8f5e9; color: #2e7d32; }
+
+        @media (max-width: 768px) {
+            .search-layout { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ASTU Lost & Found System</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a> |
+            <a href="search.html">Search Items</a> |
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Find Missing Items</h2>
+        
+        <div class="search-layout">
+            <aside class="filters">
+                <h3>Filters</h3>
+                <form id="filterForm">
+                    <label>Keyword</label>
+                    <input type="text" placeholder="Search name...">
+
+                    <label>Type</label>
+                    <select>
+                        <option value="all">All Items</option>
+                        <option value="lost">Lost</option>
+                        <option value="found">Found</option>
+                    </select>
+
+                    <label>Category</label>
+                    <select>
+                        <option>All Categories</option>
+                        <option>ID Card</option>
+                        <option>Book</option>
+                        <option>Electronics</option>
+                        <option>Others</option>
+                    </select>
+
+                    <label>Date Since</label>
+                    <input type="date">
+
+                    <button type="submit" style="width:100%; margin-top:15px;">Apply Filters</button>
+                </form>
+            </aside>
+
+            <section>
+                <div class="results-grid">
+                    <div class="item-card">
+                        <div class="item-img">No Image Provided</div>
+                        <div class="item-info">
+                            <span class="status-tag status-lost">Lost</span>
+                            <h4>Calculus Textbook</h4>
+                            <p><small>Location: Block 402</small></p>
+                            <button class="button" style="padding: 5px 10px; font-size: 0.8rem;">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-img">No Image Provided</div>
+                        <div class="item-info">
+                            <span class="status-tag status-found">Found</span>
+                            <h4>Samsung Galaxy S21</h4>
+                            <p><small>Location: Student Lounge</small></p>
+                            <button class="button" style="padding: 5px 10px; font-size: 0.8rem;">Claim Item</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ASTU Lost & Found System</p>
+    </footer>
+    <script src="js/data.js"></script>
+<script src="js/search.js"></script>
+
+</body>
+</html>

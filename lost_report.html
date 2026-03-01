@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Lost Item</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>ASTU Lost & Found</h1>
+    <nav>
+        <a href="dashboard.html">Dashboard</a> |
+        <a href="search.html">Search</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Report Lost Item</h2>
+
+    <form>
+        <label>Item Name</label><br>
+        <input type="text" required><br><br>
+
+        <label>Category</label><br>
+        <select required>
+            <option>ID Card</option>
+            <option>Book</option>
+            <option>Electronics</option>
+            <option>Others</option>
+        </select><br><br>
+
+        <label>Date Lost</label><br>
+        <input type="date" required><br><br>
+
+        <label>Location</label><br>
+        <input type="text" required><br><br>
+
+        <label>Description</label><br>
+        <textarea rows="4"></textarea><br><br>
+
+        <label>Upload Image</label><br>
+        <input type="file"><br><br>
+
+        <button type="submit">Submit Report</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 ASTU</p>
+</footer>
+
+</body>
+</html>
